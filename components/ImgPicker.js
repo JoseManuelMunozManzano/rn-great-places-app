@@ -6,7 +6,7 @@ import Constants from 'expo-constants';
 
 import Colors from '../constants/Colors';
 
-const ImgPicker = () => {
+const ImgPicker = ({ onImageTaken }) => {
   const [pickedImage, setPickedImage] = useState();
 
   const verifyPermissions = async () => {
@@ -36,6 +36,7 @@ const ImgPicker = () => {
 
     //console.log(image);
     setPickedImage(image.uri);
+    onImageTaken(image.uri);
   };
 
   return (
@@ -59,6 +60,7 @@ const ImgPicker = () => {
 const styles = StyleSheet.create({
   imagePicker: {
     alignItems: 'center',
+    marginBottom: 15,
   },
   imagePreview: {
     width: '100%',
