@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Platform, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
+
 import Colors from '../constants/Colors';
 
 const MapScreen = ({ navigation }) => {
