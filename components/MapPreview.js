@@ -7,7 +7,7 @@ const MapPreview = ({ location, children, style, onPress }) => {
   let imagePreviewUrl;
 
   if (location) {
-    imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:A%${location.lat},${location.lng}&key=${ENV.googleApiKey}`;
+    imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:C%7C${location.lat},${location.lng}&key=${ENV.googleApiKey}`;
   }
 
   return (
